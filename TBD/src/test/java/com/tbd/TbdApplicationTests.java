@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 
@@ -20,6 +21,7 @@ public class TbdApplicationTests implements Serializable {
     TestTableDao testTableDao;
 
     @Test
+    @Transactional
     public void contextLoads() {
         testTableDao.insert(new TestTable()
                 .setId(1L)
