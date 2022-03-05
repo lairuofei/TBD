@@ -9,6 +9,5 @@ import org.beetl.sql.core.annotatoin.Table;
 @Data
 @Accessors(chain = true)
 @NoArgsConstructor
-@AllArgsConstructor
 public class Order {
 }
