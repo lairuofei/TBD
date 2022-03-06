@@ -19,7 +19,7 @@ public class Order implements Serializable {
     @AutoID
     private Long autoId;
 
-    private String orderId;
+    private String orderNo;
 
     private Long tableId;
 
