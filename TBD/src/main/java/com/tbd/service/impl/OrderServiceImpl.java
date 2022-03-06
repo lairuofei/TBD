@@ -11,7 +11,8 @@ import java.util.List;
 @Slf4j
 public class OrderServiceImpl implements OrderService {
     @Override
-    public List<Order> queryAllOrder() {
+    public List<Order> queryAllOrder(int i) {
+        System.out.println(System.currentTimeMillis() + "  " +i);
         return null;
     }
 }
