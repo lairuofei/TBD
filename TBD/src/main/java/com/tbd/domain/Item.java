@@ -4,11 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.beetl.core.lab.TailBean;
 import org.beetl.sql.core.annotatoin.AutoID;
 import org.beetl.sql.core.annotatoin.Table;
+import org.beetl.sql.core.annotatoin.Tail;
 
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author lairuofei
@@ -17,17 +17,22 @@ import java.util.Date;
 @Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "order_t")
-public class Order extends BaseEntity implements Serializable {
+@Table(name = "item_t")
+public class Item extends BaseEntity {
 
-//    @AutoID
-//    private Long autoId;
+    @AutoID
+    private Long autoId;
 
-    private String orderNo;
+    private String itemId;
 
-    private Long tableId;
+    private String pic;
 
-    private Long userId;
+    private Double price;
 
+    private Long stock;
+
+    private Long sales;
+
+    private String desc;
 
 }

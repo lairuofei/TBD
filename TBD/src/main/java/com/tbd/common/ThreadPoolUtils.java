@@ -12,8 +12,8 @@ public class ThreadPoolUtils {
     @Bean("testExecutor")
     public ThreadPoolExecutor threadPoolExecutor(){
         ThreadPoolExecutor executor = ExecutorBuilder.create()
-                .setCorePoolSize(50)
-                .setMaxPoolSize(50)
+                .setCorePoolSize(500)
+                .setMaxPoolSize(500)
                 .useSynchronousQueue()
                 .setHandler(new ThreadPoolExecutor.DiscardPolicy())
                 .build();

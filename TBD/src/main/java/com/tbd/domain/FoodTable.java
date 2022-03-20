@@ -7,9 +7,6 @@ import lombok.experimental.Accessors;
 import org.beetl.sql.core.annotatoin.AutoID;
 import org.beetl.sql.core.annotatoin.Table;
 
-import java.io.Serializable;
-import java.util.Date;
-
 /**
  * @author lairuofei
  */
@@ -17,17 +14,16 @@ import java.util.Date;
 @Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "order_t")
-public class Order extends BaseEntity implements Serializable {
+@Table(name = "food_table_t")
+public class FoodTable extends BaseEntity {
 
-//    @AutoID
-//    private Long autoId;
+    @AutoID
+    private Long autoId;
 
-    private String orderNo;
+    private String tableId;
 
-    private Long tableId;
+    private Long position;
 
-    private Long userId;
-
+    private String status;
 
 }
